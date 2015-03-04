@@ -1,1 +1,23 @@
+import random
+from pr_queue import Queue
 
+class Test:
+  def test1(self):
+    q = Queue()
+    for i in range(10):
+      q.insert(random.randint(0, 100))
+    q.dump()
+
+  def test2(self):
+    q = Queue()
+    for i in range(100):
+      q.insert(random.randint(0, 100))
+    q.dump()
+    print " "
+    for i in range(100):
+      print q.remove()
+      
+q = Test()
+q.test1()
+print " "
+q.test2()
